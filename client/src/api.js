@@ -15,7 +15,7 @@
  * ==============================================================================
  */
 
-const API_BASE = '/api';
+const API_BASE = import.meta.env.VITE_API_BASE_URL || '/api';
 
 export async function request(endpoint, options = {}) {
   const token = sessionStorage.getItem('aura_admin_token') || localStorage.getItem('aura_admin_token');
@@ -34,7 +34,7 @@ export async function request(endpoint, options = {}) {
   const res = await fetch(`${API_BASE}${endpoint}`, {
     ...options,
     headers,
-    credentials: 'same-origin',
+    credentials: 'include',
   });
 
   const data = await res.json().catch(() => ({}));
