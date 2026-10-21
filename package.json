@@ -1,0 +1,38 @@
+{
+  "name": "cloths-website",
+  "version": "1.0.0",
+  "description": "AURA ATELIER - Complete Luxury Clothing E-Commerce Website & Admin Dashboard",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "build": "npm.cmd --prefix client run build",
+    "dev": "concurrently \"node server/server.js\" \"npm.cmd --prefix client run dev\"",
+    "dev:server": "node server/server.js",
+    "dev:client": "npm.cmd --prefix client run dev"
+  },
+  "keywords": [
+    "clothing",
+    "ecommerce",
+    "luxury",
+    "fashion",
+    "admin-dashboard",
+    "react",
+    "express",
+    "sqlite"
+  ],
+  "author": "Antigravity",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "better-sqlite3": "^13.0.3",
+    "concurrently": "^9.1.2",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.6",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.7.1",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.4.0",
+    "nodemailer": "^10.1.0"
+  }
+}
